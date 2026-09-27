@@ -1,0 +1,15 @@
+public class Magic {
+//we will refer to myNumber as the original number
+	public static void main(String[] args) {
+  int myNumber = 98;
+  int stepOne = myNumber * myNumber;
+  int stepTwo = stepOne + myNumber;
+  int stepThree = stepTwo / myNumber;
+  int stepFour = stepThree + 17;
+  int stepFive = stepFour - myNumber;
+  int stepSix = stepFive / 6;
+  
+    System.out.println(stepSix);
+   //no what what number myNumber get changed to the result wil always be 3 
+	}
+}
