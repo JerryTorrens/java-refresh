@@ -1,0 +1,48 @@
+public class Droid {
+   int batteryLevel;
+   String name;
+
+public Droid(String droidName){
+  name = droidName;
+  batteryLevel = 100;
+
+}
+//returns a sring with the droids name
+public String toString(){
+  return "Hello, I'm the droid " + name;
+}
+
+public void batteryLevelDown(){
+  batteryLevel = batteryLevel - 10;
+} 
+public void performTask(String task){
+  System.out.println(name + " is performing task " + task);
+
+
+}
+public int getBatteryLevel(){
+  return batteryLevel;
+}
+
+public void energyReport(){
+   System.out.println(getBatteryLevel);
+}
+
+
+  public static void main(String[] args){
+    Droid Codey = new Droid("Codey");
+    //prints out the variable type
+    System.out.println(Codey);
+    //prints out the droids name
+    System.out.println(Codey.name);
+   Codey.performTask("dance");
+   Codey.energyReport();
+    
+
+
+
+  
+
+  }
+
+}
