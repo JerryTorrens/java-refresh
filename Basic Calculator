@@ -1,0 +1,48 @@
+//this program show how to use a calcuor for math functions
+
+public class Calculator{
+
+  public Calculator(){
+
+  }
+//this is a method to add two integers
+  public int add(int a, int b){
+    return a+b;
+
+  }
+  //this method subtracts the difference of two intergers
+  public int subtract (int a, int b){
+    return a-b;
+
+  } 
+  //this method multiplies two integers
+  public int multiply(int a, int b){
+    
+    return a*b;
+  }
+//this method divides two integers
+// add input validation for divide and modulo
+  public int divide(int a, int b){
+    if (b == 0) {
+      throw new ArithmeticException("Cannot divide by zero");
+    }
+    return a / b; 
+  }
+
+  public int modulo(int a, int b){
+    if (b == 0) {
+      throw new ArithmeticException("Cannot modulo by zero");
+    }
+    return a % b;
+  }
+//this is the main method
+  public static void main(String[] args){
+
+    Calculator myCalculator = new Calculator();
+    System.out.println(myCalculator.add(5,7));
+        System.out.println(myCalculator.subtract(45,11));
+
+
+
+  }
+}
