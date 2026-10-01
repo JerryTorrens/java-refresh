@@ -1,0 +1,38 @@
+public class CarLoan {
+//this is a code to calculate a car loan
+
+  
+  public static void main(String[] args) {
+      //instance variables for the car Loan
+    int carLoan = 10000;
+    int loanLength = 3;
+    int interestRate = 5;
+    int downPayment = 2000;
+//an if statement to check for errors
+    if (loanLength <= 0 || interestRate <=0){
+      System.out.println("Error! You must take out a valid car loan.");
+
+    }
+    
+      ///else staement to check if the down payment is bigger than the car loans
+
+      else if (downPayment > carLoan){
+        System.out.println("The car can be paid in full.");
+      }
+
+      ///else statement to see the monthlypayment with interest would be on the car
+      else if (downPayment < carLoan){
+        int remainingBalance = carLoan - downPayment;
+        int months = loanLength * 12;
+        int monthlyBalance = remainingBalance / months;
+        int interest = (monthlyBalance * interestRate)/100;
+        int monthlyPayment = monthlyBalance + interest;
+        System.out.println(monthlyPayment);
+
+      }
+    
+
+	
+
+  }
+}
