@@ -1,0 +1,46 @@
+// This program finds all prime numbers in an array using Java
+
+// Import ArrayList so we can store prime numbers
+import java.util.ArrayList;
+
+class PrimeDirective {
+  
+  // Checks if a number is prime
+  public boolean isPrime(int number){
+    // Handle edge cases
+    if (number == 2){
+      return true;
+    }
+    else if (number < 2){
+      return false;
+    }
+    // Check divisibility from 2 to number-1
+    for (int i = 2; i < number; i++) {
+      if (number % i == 0) {
+        return false;
+      }
+    }
+    // If no divisors found, number is prime
+    return true;
+  }
+
+  // Returns an ArrayList of all primes in the input array
+  public ArrayList<Integer> onlyPrimes(int[] numbers) {
+    ArrayList<Integer> primes = new ArrayList<Integer>();
+    // Loop through each number and check if it's prime
+    for (int number : numbers) {
+      if (isPrime(number)) {
+        primes.add(number);
+      }
+    }
+    return primes;
+  }
+
+  public static void main(String[] args) {
+    // Create instance and test methods
+    PrimeDirective pd = new PrimeDirective();
+    int[] numbers = {6, 29, 28, 33, 11, 100, 101, 43, 89};
+    System.out.println(pd.isPrime(6)); // should print false
+    System.out.println(pd.onlyPrimes(numbers)); // should print [29, 11, 101, 43, 89]
+  }  
+}
